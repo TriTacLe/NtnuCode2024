@@ -15,10 +15,6 @@ API_TOKEN = #trenger
 API_SECRET = #trenger
 DOMAIN_ID =  #trenger hent fra Domeneshop 
 
-#domeneshop API
-url = "https://api.domeneshop.no/v0/domains"
-url_2 = "https://{token}:{secret}@api.domeneshop.no/v0/dyndns/update?hostname=.codexenmo.no&myip=127.0.0.1"
-
 #funksjon for å oppdatere DNS-oppføringen til en spesifikk Raspberry Pi
 def update_dns_record(subdomain, ip_address):
     url = f"https://api.domeneshop.no/v0/domains/{DOMAIN_ID}/dns"

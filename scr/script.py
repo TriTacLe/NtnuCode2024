@@ -1,12 +1,15 @@
+#ignorer kommentarene. reflekterte bare over koden så jeg har et dypt forståelse over funksjonaliteten
 """
 For å sette opp dynamisk DNS med Domeneshop sitt API for å automatisk oppdatere DNS-registreringer når IP-adressen endrer seg, 
-kan du implementere et Python-skript som kjører på din VM i Azure. 
-Dette skriptet vil overvåke IP-adressene til de tilkoblede Raspberry Pi-enhetene og oppdatere DNS-oppføringene på Domeneshop for å peke til de riktige IP-adressene.
-"""
-"""
-Dette programmet vil bruke Domeneshop API til å oppdatere A-oppføringer for hver Raspberry Pi med unike subdomener som rpi1.codexenmo.no, rpi2.codexenmo.no, osv.
-"""
+har jeg laget (implementert) et python-script som kjører på vårres VM i Azure. 
+Dette scriptet vil overvåke IP-adressene til de tilkoblede RPi-enhetene og oppdatere DNS-oppføringene på Domeneshop for å peke til de riktige IP-adressene.
 
+programmet vil bruke Domeneshop API til å oppdatere A-oppføringer (søk opp selv) for hver RPi med unike subdomener som rpi1.codexenmo.no, rpi2.codexenmo.no etc.
+
+Koden er designet for å oppdatere DNS-oppføringer på Domeneshop for subdomener av hoveddomenet codexenmo.no, 
+slik at hvert subdomene (ex: rpi1.codexenmo.no, rpi2.codexenmo.no) peker til en spesifikk IP-adresse. 
+gunstig når man bruker flere enheter av RPier, og ønsker å tildele dem hver sin unike adresse (IP) på internett, slik at de kan nås via subdomener.
+"""
 import requests
 from requests.auth import HTTPBasicAuth
 import json

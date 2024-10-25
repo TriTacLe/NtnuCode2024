@@ -12,10 +12,11 @@ url = "https://api.domeneshop.no/v0/domains"
 response = requests.get(url, auth=HTTPBasicAuth(API_TOKEN, API_SECRET))
 
 #check responsstatus og innhold
-if response.status_code == 200:
+if response.status_code == 200: #200 er statuskode for http
     print("Domeneliste hentet:")
     print(response.json())
 else:
     print("Kunne ikke hente domeneliste.")
     print("Statuskode:", response.status_code)
     print("Respons:", response.json())
+

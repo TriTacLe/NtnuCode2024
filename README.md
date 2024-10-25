@@ -1,0 +1,3 @@
+### Overordnet beskrivelse av casen
+
+Vi distribuerer programvaren på Raspberry Pi-enheter som installeres på anlegg med batterier, solceller og invertere. Per i dag har vi flere Raspberry Pi-er plassert rundt i Norge, men er begrenset i vår mulighet til å få tilgang til nettsiden/dashbordet som blir hostet lokalt på enheten. Vi ønsker å sette opp en tjeneste som gjør det mulig å automatisk sette opp en custom URL for hver Raspberry Pi, slik at det blir mulig å åpne opp dashbordet hvor som helst i verden over internett. Med utstyret studentene får utdelt vil de først demonstrere at de klarer å få tilgang til sin Raspberry Pi gjennom et unikt domene. Deretter vil studentene utvikle et grensesnitt for å vise de ulike enhetene som er koblet til serveren.pyth

@@ -33,7 +33,7 @@ def update_dns_record(subdomain, ip_address):
         "ttl": 3600         #time to live satt til 1 time
     }
 """
-
+#DDNS oppdatering ikke oppretting
 def update_ddns(subdomain, ip_address=None):
     #DDNS-URL for dynamisk IP-oppdatering
     url = f"https://{API_TOKEN}:{API_SECRET}@api.domeneshop.no/v0/dyndns/update?hostname={subdomain}.codexenmo.no"
@@ -41,10 +41,10 @@ def update_ddns(subdomain, ip_address=None):
     if ip_address:
         url += f"&myip={ip_address}"
     
-    # Send GET-forespørsel til DDNS-endepunktet
+    #GET-forespørsel til DDNS-endepunktet
     response = requests.get(url)
     
-    # Sjekk responsstatus og logg resultatet
+    #sjekk responsstatus og logg resultatet
     if response.status_code in [200, 204]:  # Nå regner vi også 204 som en suksess
         print(f"IP for {subdomain}.codexenmo.no updated/created to {ip_address if ip_address else 'public IP'} via DDNS")
 

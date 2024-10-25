@@ -11,8 +11,8 @@ from requests.auth import HTTPBasicAuth
 import json
 
 # Domeneshop API-autentisering
-API_TOKEN = #trenger
-API_SECRET = #trenger
+API_TOKEN = "heytDI6dBJVcUQHV" #trenger
+API_SECRET = "ekNjmFzmJZ3Y9noTVvwavcKRo6NH3G5s09vDfeJhj9KpCOlKQsELruoTNuohFKNs" #trenger
 DOMAIN_ID =  #trenger hent fra Domeneshop 
 
 #domeneshop API
@@ -24,10 +24,10 @@ def update_dns_record(subdomain, ip_address):
     url = f"https://api.domeneshop.no/v0/domains/{DOMAIN_ID}/dns"
     headers = {"Content-Type": "application/json"}
     data = {
-        "host": subdomain,  # subdomene f.eks. rpi1, rpi2
-        "type": "A",        # type A-oppføring for IPv4
+        "host": subdomain,  #subdomene f.eks. rpi1, rpi2
+        "type": "A",        #type A-oppføring for IPv4
         "data": ip_address,
-        "ttl": 3600         # TTL satt til 1 time
+        "ttl": 3600         #TTL satt til 1 time
     }
 
     #API-forespørsel

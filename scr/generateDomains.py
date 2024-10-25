@@ -7,6 +7,8 @@ API_SECRET = "ekNjmFzmJZ3Y9noTVvwavcKRo6NH3G5s09vDfeJhj9KpCOlKQsELruoTNuohFKNs"
 
 #endepunkt for å liste opp domener
 url = "https://api.domeneshop.no/v0/domains"
+#url = "https://{API_TOKEN}:{API_SECRET}@api.domeneshop.no/v0/dyndns/update?hostname=codexenmo.no&myip=127.0.0.1"
+
 
 #send forespørsel med autentisering
 response = requests.get(url, auth=HTTPBasicAuth(API_TOKEN, API_SECRET))

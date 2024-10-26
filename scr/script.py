@@ -78,8 +78,11 @@ def update_ddns(subdomain, ip_address=None):
 #eksempel på oppdatering av subdomener med unike IP-er
 devices = {
     "TriTest1": "192.168.1.101",
-    "TriTest2": "192.168.1.102",
-    "Tri": "51.120.13.200"
+    "TriTest2": "192.168.1.102", 
+    "Tri": "51.120.13.200",
+    #"broadcast": "192.168.1.255",
+    "broadcast": "192.168.1.133",
+
 }
 
 #oppdater hver Raspberry Pi sitt subdomene med den aktuelle IP-adressen

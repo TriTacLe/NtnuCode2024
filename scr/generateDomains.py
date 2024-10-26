@@ -22,3 +22,4 @@ else:
     print("Statuskode:", response.status_code)
     print("Respons:", response.json())
 
+    

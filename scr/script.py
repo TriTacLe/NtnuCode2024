@@ -82,7 +82,6 @@ devices = {
     "Tri": "51.120.13.200",
     #"broadcast": "192.168.1.255",
     "broadcast": "192.168.1.133",
-
 }
 
 #oppdater hver Raspberry Pi sitt subdomene med den aktuelle IP-adressen

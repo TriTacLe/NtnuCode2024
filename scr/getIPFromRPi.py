@@ -30,7 +30,7 @@ def get_ip_and_domain_from_pi(pi_user, pi_ip):
     return domain_name, ip_address, is_raspberry_pi
 
 # Example usage
-domain, ip, is_raspberry_pi = get_ip_and_domain_from_pi('enmo', '192.168.1.133')
+domain, ip, is_raspberry_pi = get_ip_and_domain_from_pi('gruppe12', '192.168.1.133')
 print("Domain Name:", domain)
 print("IP Address:", ip)
 print("Is Raspberry Pi:", is_raspberry_pi)

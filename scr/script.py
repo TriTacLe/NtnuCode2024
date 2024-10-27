@@ -1,10 +1,10 @@
 import requests
 from requests.auth import HTTPBasicAuth
 
-#domeneshop API-autentisering
+#domeneshop api-autentisering
 API_TOKEN = "heytDI6dBJVcUQHV"
 API_SECRET = "ekNjmFzmJZ3Y9noTVvwavcKRo6NH3G5s09vDfeJhj9KpCOlKQsELruoTNuohFKNs"
-DOMAIN_ID = 2089158  # ID for codexenmo.no
+DOMAIN_ID = 2089158  #IP for codexenmo.no
 
 #sjekke om en DNS-oppføring allerede eksisterer
 """
@@ -75,6 +75,7 @@ def update_ddns(subdomain, ip_address=None):
         except requests.exceptions.JSONDecodeError:
             print("Failed to update DNS record:", response.status_code, response.text)
     """
+
 #eksempel på oppdatering av subdomener med unike IP-er
 devices = {
     "TriTest1": "192.168.1.101",
@@ -82,6 +83,7 @@ devices = {
     "Tri": "51.120.13.200",
     #"broadcast": "192.168.1.255",
     "broadcast": "192.168.1.133",
+
 }
 
 #oppdater hver Raspberry Pi sitt subdomene med den aktuelle IP-adressen
